@@ -1,4 +1,4 @@
-package com.example.smart_diary;
+package com.example.smartdiary;
 
 import org.junit.Test;
 

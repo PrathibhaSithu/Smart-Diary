@@ -1,22 +1,21 @@
 {
   "project_info": {
-    "project_number": "407277996446",
-    "firebase_url": "https://smartdiary-841c9-default-rtdb.firebaseio.com",
-    "project_id": "smartdiary-841c9",
-    "storage_bucket": "smartdiary-841c9.appspot.com"
+    "project_number": "43973386214",
+    "project_id": "smartdiarydb1",
+    "storage_bucket": "smartdiarydb1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:407277996446:android:fb0594a63c28c151056e8f",
+        "mobilesdk_app_id": "1:43973386214:android:9a5987b7270e81f0174027",
         "android_client_info": {
-          "package_name": "com.example.smart_diary"
+          "package_name": "com.example.smartdiary"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDqlKxQIFGXyKhp4lwxkRdvLkL_1VwyAvY"
+          "current_key": "AIzaSyD_99aL0I3nsIwsr0yRh7o08EqtBuHGi58"
         }
       ],
       "services": {

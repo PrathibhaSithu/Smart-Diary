@@ -44,18 +44,27 @@
                 android:textColor="@color/black"
                 />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/login_password"
-                android:background="@drawable/inputfields"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:padding="8dp"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:drawableStart="@drawable/lock"
-                android:drawablePadding="10dp"
-                android:textColor="@color/black"/>
+                app:passwordToggleEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+
+                <EditText
+                    android:id="@+id/login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/inputfields"
+                    android:drawableStart="@drawable/lock"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:padding="8dp"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:layout_width="match_parent"
