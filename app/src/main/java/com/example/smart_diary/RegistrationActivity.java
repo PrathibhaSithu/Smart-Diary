@@ -37,7 +37,6 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
 
         mAuth = FirebaseAuth.getInstance();
-        
         DialogBox = new ProgressDialog(this);
 
         registration();
