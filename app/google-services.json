@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "407277996446",
+    "firebase_url": "https://smartdiary-841c9-default-rtdb.firebaseio.com",
     "project_id": "smartdiary-841c9",
     "storage_bucket": "smartdiary-841c9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:407277996446:android:aa21d62088e4a2b2056e8f",
+        "mobilesdk_app_id": "1:407277996446:android:fb0594a63c28c151056e8f",
         "android_client_info": {
           "package_name": "com.example.smart_diary"
         }
