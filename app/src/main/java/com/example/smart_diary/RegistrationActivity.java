@@ -1,15 +1,20 @@
 package com.example.smart_diary;
 
+import static android.app.ProgressDialog.show;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -21,6 +26,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText signupName, signupEmail, signupUsername, signupPassword;
     private Button signupButton;
     private TextView loginRedirectText;
+    private ProgressDialog DialogBox;
 
     //firebase
     private FirebaseAuth mAuth;
@@ -31,6 +37,8 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
 
         mAuth = FirebaseAuth.getInstance();
+        
+        DialogBox = new ProgressDialog(this);
 
         registration();
     }
@@ -69,14 +77,16 @@ public class RegistrationActivity extends AppCompatActivity {
                     signupPassword.setError("Password is required...");
                     return;
                 }
+                
+                DialogBox.setMessage("Please wait! Still Processing...");
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        } else {
-                            String error = task.getException().getMessage();
-                            signupEmail.setError(error);
+                            Toast.makeText(getApplicationContext(),"Registration Successful...!", Toast.LENGTH_SHORT).show();
+                        } 
+                        else {
+                            Toast.makeText(getApplicationContext(),"Registration Failed....!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
