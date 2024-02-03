@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    // my colors
+    <color name="Lavender">#adaff4</color>
+    <color name="L2">#989eec</color>
+    <color name="L3">#8482eb</color>
+    <color name="L4">#6962d2</color>
+    <color name="L5">#5246bc</color>
+    <color name="Red">#ff0000</color>
 </resources>
