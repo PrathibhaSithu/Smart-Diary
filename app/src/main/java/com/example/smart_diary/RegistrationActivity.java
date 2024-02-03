@@ -79,12 +79,15 @@ public class RegistrationActivity extends AppCompatActivity {
                 }
                 
                 DialogBox.setMessage("Please wait! Still Processing...");
+                DialogBox.show();
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             DialogBox.dismiss();
                             Toast.makeText(getApplicationContext(),"Registration Successful...!", Toast.LENGTH_SHORT).show();
+
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } 
                         else {
                             DialogBox.dismiss();
