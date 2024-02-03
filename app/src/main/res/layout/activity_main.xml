@@ -12,7 +12,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp">
+        android:layout_margin="24dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Login"
-                android:textSize="36sp"
+                android:textSize="40sp"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/L5"/>
@@ -36,12 +37,13 @@
                 android:layout_height="50dp"
                 android:id="@+id/login_username"
                 android:background="@drawable/inputfields"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
                 android:padding="8dp"
                 android:hint="Username"
                 android:drawableLeft="@drawable/person"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                />
 
             <EditText
                 android:layout_width="match_parent"
@@ -61,6 +63,7 @@
                 android:layout_height="60dp"
                 android:text="Login"
                 android:textColor="@color/black"
+                android:backgroundTint="@color/L3"
                 android:id="@+id/login_button"
                 android:textSize="20sp"
                 android:layout_marginTop="30dp"
@@ -74,7 +77,7 @@
                 android:layout_gravity="center"
                 android:padding="8dp"
                 android:layout_marginTop="10dp"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
