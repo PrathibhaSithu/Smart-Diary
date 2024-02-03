@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText loginUsername, loginPassword;
+    private EditText loginEmail, loginPassword;
     private Button loginButton;
     private TextView signupRedirectText, forgotPasswordText;
     @Override
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loginDetails() {
-        loginUsername = findViewById(R.id.login_username);
+        loginEmail = findViewById(R.id.login_username);
         loginPassword = findViewById(R.id.login_password);
 
         loginButton = findViewById(R.id.login_button);
@@ -35,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username = loginUsername.getText().toString().trim();
+                String username = loginEmail.getText().toString().trim();
                 String password = loginPassword.getText().toString().trim();
 
                 if(TextUtils.isEmpty(username)){
-                    loginUsername.setError("Username is Required...");
+                    loginEmail.setError("Username is Required...");
                     return;
                 }
                 if (TextUtils.isEmpty(password)){

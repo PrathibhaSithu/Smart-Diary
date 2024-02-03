@@ -38,9 +38,9 @@
                 android:background="@drawable/inputfields"
                 android:layout_marginTop="30dp"
                 android:padding="8dp"
-                android:hint="@string/username"
+                android:hint="@string/email"
                 android:drawableStart="@drawable/person"
-                android:drawablePadding="8dp"
+                android:drawablePadding="10dp"
                 android:textColor="@color/black"
                 />
 
@@ -54,7 +54,7 @@
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:drawableStart="@drawable/lock"
-                android:drawablePadding="8dp"
+                android:drawablePadding="10dp"
                 android:textColor="@color/black"/>
 
             <Button
