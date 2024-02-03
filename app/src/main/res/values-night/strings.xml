@@ -5,4 +5,10 @@
     <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="username">Username</string>
+
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_an_user_login">Already an user? Login</string>
 </resources>

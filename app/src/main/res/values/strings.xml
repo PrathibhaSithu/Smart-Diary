@@ -7,4 +7,10 @@
     <string name="username">Username</string>
     <string name="not_yet_registered_sign_up">Not yet registered? Sign Up</string>
     <string name="forget_password">Forget Password</string>
+
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_an_user_login">Already an user? Login</string>
 </resources>
