@@ -34,36 +34,12 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/signup_name"
-                android:background="@drawable/inputfields"
-                android:layout_marginTop="25dp"
-                android:padding="8dp"
-                android:hint="@string/name"
-                android:drawableStart="@drawable/person"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:id="@+id/signup_email"
                 android:background="@drawable/inputfields"
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
                 android:hint="@string/email"
                 android:drawableStart="@drawable/email"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/signup_username"
-                android:background="@drawable/inputfields"
-                android:layout_marginTop="20dp"
-                android:padding="8dp"
-                android:hint="@string/username"
-                android:drawableStart="@drawable/personpin"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
 

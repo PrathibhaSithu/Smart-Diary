@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    private EditText signupName, signupEmail, signupUsername, signupPassword;
+    private EditText signupEmail, signupPassword;
     private Button signupButton;
     private TextView loginRedirectText;
     private ProgressDialog DialogBox;
@@ -44,9 +44,8 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private void registration(){
-        signupName = findViewById(R.id.signup_name);
+
         signupEmail = findViewById(R.id.signup_email);
-        signupUsername = findViewById(R.id.signup_username);
         signupPassword = findViewById(R.id.signup_password);
 
         signupButton = findViewById(R.id.signup_button);
@@ -56,21 +55,11 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String name = signupName.getText().toString().trim();
                 String email = signupEmail.getText().toString().trim();
-                String username = signupUsername.getText().toString().trim();
                 String password = signupPassword.getText().toString().trim();
 
-                if(TextUtils.isEmpty(name)){
-                    signupName.setError("Name is required...");
-                    return;
-                }
                 if(TextUtils.isEmpty(email)){
                     signupEmail.setError("Email is required...");
-                    return;
-                }
-                if(TextUtils.isEmpty(username)){
-                    signupUsername.setError("User Name is required...");
                     return;
                 }
                 if(TextUtils.isEmpty(password)){
@@ -87,7 +76,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             DialogBox.dismiss();
                             Toast.makeText(getApplicationContext(),"Registration Successful...!", Toast.LENGTH_SHORT).show();
 
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                         } 
                         else {
                             DialogBox.dismiss();
