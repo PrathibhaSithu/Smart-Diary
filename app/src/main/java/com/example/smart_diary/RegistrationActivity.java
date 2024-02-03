@@ -2,6 +2,7 @@ package com.example.smart_diary;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -54,6 +55,13 @@ public class RegistrationActivity extends AppCompatActivity {
                     signupPassword.setError("Password is required...");
                     return;
                 }
+            }
+        });
+        loginRedirectText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
