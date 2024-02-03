@@ -83,9 +83,11 @@ public class RegistrationActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+                            DialogBox.dismiss();
                             Toast.makeText(getApplicationContext(),"Registration Successful...!", Toast.LENGTH_SHORT).show();
                         } 
                         else {
+                            DialogBox.dismiss();
                             Toast.makeText(getApplicationContext(),"Registration Failed....!", Toast.LENGTH_SHORT).show();
                         }
                     }
