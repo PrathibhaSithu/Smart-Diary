@@ -1,5 +1,6 @@
 package com.example.smart_diary;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,15 +11,26 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class RegistrationActivity extends AppCompatActivity {
 
     private EditText signupName, signupEmail, signupUsername, signupPassword;
     private Button signupButton;
     private TextView loginRedirectText;
+
+    //firebase
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        mAuth = FirebaseAuth.getInstance();
 
         registration();
     }
@@ -48,13 +60,26 @@ public class RegistrationActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(email)){
                     signupEmail.setError("Email is required...");
                     return;
-                } if(TextUtils.isEmpty(username)){
+                }
+                if(TextUtils.isEmpty(username)){
                     signupUsername.setError("User Name is required...");
                     return;
-                } if(TextUtils.isEmpty(password)){
+                }
+                if(TextUtils.isEmpty(password)){
                     signupPassword.setError("Password is required...");
                     return;
                 }
+                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        } else {
+                            String error = task.getException().getMessage();
+                            signupEmail.setError(error);
+                        }
+                    }
+                });
             }
         });
         loginRedirectText.setOnClickListener(new View.OnClickListener() {
