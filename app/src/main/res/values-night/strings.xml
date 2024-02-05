@@ -20,4 +20,9 @@
     <string name="expences">Expences</string>
     <string name="map">Map</string>
     <string name="messages">Messages</string>
+    <string name="expense_manager">Expense Manager</string>
+    <string name="drawlayout">Drawer Layout</string>
+    <string name="profile">Profile</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="logout">Logout</string>
 </resources>
